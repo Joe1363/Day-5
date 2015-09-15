@@ -1,0 +1,26 @@
+.content {
+  width:auto;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/*body {
+  background: url('http://img01.deviantart.net/6ee0/i/2008/131/7/8/crumpled_white_paper_texture_by_melemel.jpg');
+  background-size: cover;
+}*/
+
+#header {
+  font-family: fantasy;
+}
+
+#picbox {
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+}
+
+#pic {
+  margin-left: -500px;
+}

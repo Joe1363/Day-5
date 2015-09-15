@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script>
+    window.onload = function() {
+    document.getElementById("textbox").focus();
+
+
+    var bg = "#";
+    var options = ['a','b','c','d','e','f','1','2','3','4','5','6','7','8','9','0']
+
+    for (var i = 0 ; i < 6 ; i++) {
+    bg += options[Math.floor(Math.random()*16)];
+    }
+    document.getElementsByTagName('body')[0].style.background = bg;
+      };
+
+    function updateHeader() {
+      var newHeader = document.getElementById("textbox").value;
+      var oldHeader = document.getElementById("header");
+      oldHeader.innerHTML = "Hello " + " " + newHeader + ". Welcome to our site.";
+      document.getElementById("header").style.color = "white";
+
+      document.getElementById("textbox").value = " ";<!--Clear textbox-->
+      document.getElementById("textbox").focus();<!--Focus to textbox-->
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <script type='text/javascript' src='function.js'></script>
+
+  <link rel='stylesheet' type='text/css' href='function.css'/>
+  <title>Header Change</title>
+
+</head>
+
+<body>
+  <div class='content'>
+    <h1 id="header">What's your name?</h1>
+      <input type="text" id="textbox" onkeydown="if (event.keyCode == 13) document.getElementById('btn').click()"/>
+      <input type="button" id='btn' value="Click Me" onclick="updateHeader()"/>
+  </div>
+  <div id="picbox">
+    <img id="pic" src="http://www.clker.com/cliparts/s/c/g/h/p/x/arrow-hi.png">
+  </div>
+</body>
+
+</html>
